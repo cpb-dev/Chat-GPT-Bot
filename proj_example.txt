@@ -1,0 +1,1 @@
+I created a Convolutional Neural Network using TensorFlow and Kera's to analyze a test and validation set of MIDI files. While the reproduced data was rudimentary and required some refining, the project allowed me to work with a variety of data collection and analysis techniques, as well as machine learning.

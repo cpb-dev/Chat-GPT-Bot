@@ -1,0 +1,11 @@
+This project was used as part of my AI MSc at the University of Kent for my final Dissertation. With this project, I wanted to comprise a dataset of different songs by various artists, constructing a deep neural network that can find patterns and learn to produce songs of its own.
+
+
+Within this project I had to collect different sets of music data, comprising of MP3, WAV and MIDI files. I stored these files locally with relevant tagging that can be easily interpreted by the Neural Network I was going to feed this information through. First I needed to analyse the different formats to see what patterns could be identifiable and how they would be relevant to the reproduction of a new music sound file. Upon analysis the best dataset turned out to be with MIDI files, due to their easily interpretable nature, it made reproducing data possible. The other formats were still able to identify patterns, however, only white noise could be made when reproducing the data.
+
+
+Creating a Convolutional Neural Network with the use of TensorFlow and Kera's, I was able to analyse a test and validation set of MIDI files to reproduce musical data. This data was very rudimentary and although it resembled that of the original data, there was still some kinks that could be worked out.
+
+
+Overall this was a fun and interesting project, where I got to work with a range of different data collection and analysis techniques as well as ML.
+
