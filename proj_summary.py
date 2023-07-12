@@ -1,6 +1,12 @@
 import openai
+import json, os
 
-openai.api_key = 'YOUR API KEY'
+this_file = os.path.dirname(__file__)
+f = open(this_file + "/api_keys.json")
+data = json.load(f)
+
+api_key = data['api_key']
+openai.api_key = api_key
 
 def get_completion(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
@@ -12,12 +18,11 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
     return response.choices[0].message["content"]
 
 def processInfo():
-    file = open("proj.txt","r").read()
+    file = open("job.txt","r").read()
 
     prompt = f"""
-        Your role is to summarize the text delimited by triple backticks.
-        Write in the first person as if you are writing for a CV.
-        Use 200 words or less
+        Your role is to make the text delimited by triple backticks stand out as an opening cover letter to a business.
+        Write in the first person as if you are writing for a cover email.
 
         User input: ```{file}```
     """

@@ -1,6 +1,11 @@
-import openai
+import openai, os, json
 
-openai.api_key = 'YOUR API KEY'
+this_file = os.path.dirname(__file__)
+f = open(this_file + "/api_keys.json")
+data = json.load(f)
+api_key = data['api_key']
+
+openai.api_key = api_key
 messages = [ { "role": "system", "content": "You are a intelligent assistant."} ]
 
 while True:
